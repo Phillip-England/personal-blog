@@ -1,0 +1,8 @@
+---
+interface Props {
+  text: string
+}
+const { text } = Astro.props as Props
+---
+
+<h1 class="text-lg font-semibold">{text}</h1>

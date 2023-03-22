@@ -1,0 +1,28 @@
+---
+import Navigation from "../components/Navigation.astro"
+
+interface Props {
+  title: string
+  banner: string
+}
+
+const { title, banner } = Astro.props as Props
+---
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/ef0709a418.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>{title}</title>
+  </head>
+  <body class="flex h-screen flex-col bg-gray-400">
+    <Navigation banner={banner} />
+    <main class="flex w-full flex-1 flex-col">
+      <slot />
+    </main>
+  </body>
+</html>

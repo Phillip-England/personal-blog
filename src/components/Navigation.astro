@@ -1,0 +1,79 @@
+---
+const pathname = new URL(Astro.request.url).pathname
+const currentPath = pathname.slice(1)
+
+interface Props {
+  banner: string
+}
+const { banner } = Astro.props as Props
+---
+
+<!-- navbar  -->
+<div
+  class="fixed top-0 z-50 flex h-16 w-screen flex-row justify-between bg-black text-white shadow-md"
+>
+  <h1 class="text-md self-center p-5">{banner}</h1>
+  <div class="self-center">
+    <div id="naviconBars">
+      <i class="fa-bars fa-solid p-5"></i>
+    </div>
+    <div id="naviconX" class="hidden p-5">
+      <i class="fa-x fa-solid"></i>
+    </div>
+  </div>
+</div>
+
+<!-- nav menu -->
+<nav id="navmenu" class="fixed top-16 hidden h-full w-2/3 flex-col bg-black">
+  <ul>
+    <li class="p-4">
+      <a href="/" class={currentPath === "" ? "text-blue-500" : "text-white"}
+        >Home</a
+      >
+    </li>
+    <li class="p-4">
+      <a
+        href="/about"
+        class={currentPath === "about" ? "text-blue-500" : "text-white"}
+        >About Me</a
+      >
+    </li>
+  </ul>
+</nav>
+
+<!-- spacer -->
+<div class="h-16"></div>
+
+<script>
+  let naviconBars = document.getElementById("naviconBars") as HTMLElement
+  let naviconX = document.getElementById("naviconX") as HTMLElement
+  let navmenu = document.getElementById("navmenu") as HTMLElement
+
+  naviconBars.addEventListener("click", () => {
+    if (navmenu.classList.contains("hidden")) {
+      navmenu.classList.remove("hidden")
+      navmenu.classList.add("flex")
+      naviconBars.classList.add("hidden")
+      naviconX.classList.remove("hidden")
+    } else {
+      navmenu.classList.add("hidden")
+      navmenu.classList.remove("flex")
+      naviconBars.classList.remove("hidden")
+      naviconX.classList.add("hidden")
+    }
+  })
+
+  naviconX.addEventListener("click", () => {
+    if (!navmenu.classList.contains("hidden")) {
+      navmenu.classList.add("hidden")
+      navmenu.classList.remove("flex")
+      naviconBars.classList.remove("hidden")
+      naviconX.classList.add("hidden")
+    } else {
+      navmenu.classList.remove("hidden")
+      navmenu.classList.add("flex")
+      naviconBars.classList.add("hidden")
+      naviconX.classList.remove("hidden")
+    }
+  })
+</script>

@@ -1,0 +1,21 @@
+---
+import MainHeader from "../components/MainHeader.astro"
+import MainLayout from "../layouts/MainLayout.astro"
+---
+
+<MainLayout title="404 Not Found" banner="404 Not Found">
+  <div class="flex flex-col gap-2 p-4">
+    <MainHeader text={"Oops!"} />
+    <p>
+      It looks like the page you are trying to access does not exist! Click <a
+        class="font-bold text-blue-700 underline"
+        href="http://localhost:3000/">here</a
+      > to go home
+      <span class="font-bold italic">OR</span> click here <a
+        class="font-bold text-blue-700 underline"
+        href="https://www.youtube.com/watch?v=BBJa32lCaaY"
+        target="_blank">here</a
+      > below for a surprise!
+    </p>
+  </div>
+</MainLayout>
