@@ -1,0 +1,25 @@
+<div class="relative z-10 h-64">
+  <img
+    src="Leaf.jpg"
+    class="h-full w-full"
+    alt="Leaf"
+    loading="lazy"
+    id="image"
+  />
+  <div class="absolute inset-0 bg-black opacity-60"></div>
+  <div id="image-text" class="absolute inset-0 hidden flex-col p-6">
+    <h1 class="self-end text-xl font-bold text-white">
+      Fighting Marijuana Addiction
+    </h1>
+    <p class="self-end text-sm italic text-white">One Story at a Time</p>
+  </div>
+</div>
+
+<script>
+  let image = document.getElementById("image") as HTMLElement
+  let imageText = document.getElementById("image-text") as HTMLElement
+  image.addEventListener("load", () => {
+    imageText.classList.remove("hidden")
+    imageText.classList.add("flex")
+  })
+</script>

@@ -10,7 +10,7 @@ const { banner } = Astro.props as Props
 
 <!-- navbar  -->
 <div
-  class="fixed top-0 z-50 flex h-16 w-screen flex-row justify-between bg-black text-white shadow-md"
+  class="fixed top-0 z-50 flex h-16 w-screen flex-row justify-between bg-white font-bold text-main shadow-md"
 >
   <h1 class="text-md self-center p-5">{banner}</h1>
   <div class="self-center">
@@ -24,17 +24,20 @@ const { banner } = Astro.props as Props
 </div>
 
 <!-- nav menu -->
-<nav id="navmenu" class="fixed top-16 hidden h-full w-2/3 flex-col bg-black">
+<nav
+  id="navmenu"
+  class="fixed top-16 z-50 hidden h-full w-2/3 flex-col bg-white"
+>
   <ul>
-    <li class="p-4">
-      <a href="/" class={currentPath === "" ? "text-blue-500" : "text-white"}
+    <li class="p-4 font-serif">
+      <a href="/" class={currentPath === "" ? "text-blue-500" : "text-main"}
         >Home</a
       >
     </li>
     <li class="p-4">
       <a
         href="/about"
-        class={currentPath === "about" ? "text-blue-500" : "text-white"}
+        class={currentPath === "about" ? "text-blue-500" : "text-main"}
         >About Me</a
       >
     </li>

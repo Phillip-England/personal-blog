@@ -2,11 +2,15 @@
 import MainHeader from "../components/MainHeader.astro"
 import MainLayout from "../layouts/MainLayout.astro"
 import RecentPosts from "../components/RecentPosts.astro"
+import TopImage from "../components/TopImage.astro"
+
+const heroImage = "../../assets/Leaf.png"
 ---
 
-<MainLayout title={"Blunt Truths"} banner={"Home"}>
+<MainLayout title={"Blunt Truths"} banner={"Blunt Truths"}>
+  <TopImage />
   <RecentPosts />
-  <div class="pl-6 pr-6 pb-6">
+  <div class="p-6">
     <MainHeader text={"Vision"} />
     <p class="text-xs italic">"To believe in everyone's ability to change"</p>
     <p class="pt-4 pl-3 indent-4 text-xs">
