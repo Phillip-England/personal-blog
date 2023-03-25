@@ -1,25 +1,37 @@
-<div class="relative z-10 h-64">
-  <img
-    src="Leaf.jpg"
-    class="h-full w-full"
-    alt="Leaf"
-    loading="lazy"
-    id="image"
-  />
-  <div class="absolute inset-0 bg-black opacity-60"></div>
-  <div id="image-text" class="absolute inset-0 hidden flex-col p-6">
-    <h1 class="self-end text-xl font-bold text-white">
-      Fighting Marijuana Addiction
+---
+interface Props {
+  image: string
+  color: string
+  title: string
+  sub: string
+}
+
+const { image, title, sub, color } = Astro.props as Props
+---
+
+<style>
+  #image-container {
+    background-blend-mode: multiply;
+    background-size: cover;
+    background-position: center;
+  }
+</style>
+
+<div
+  id="image-container"
+  style={`background-image:url(${image}); background-color:${color};`}
+  class="flex flex-col"
+>
+  <div class="flex flex-1 flex-col pb-48 xs:py-20 sm:py-24 md:py-28 lg:py-48">
+    <h1
+      class="relative top-4 right-4 self-end text-lg font-bold text-white xs:top-0 xs:right-0 xs:flex xs:self-center xs:text-2xl"
+    >
+      {title}
     </h1>
-    <p class="self-end text-sm italic text-white">One Story at a Time</p>
+    <p
+      class="relative top-4 right-4 self-end italic text-white xs:top-0 xs:right-0 xs:flex xs:self-center xs:text-lg"
+    >
+      {sub}
+    </p>
   </div>
 </div>
-
-<script>
-  let image = document.getElementById("image") as HTMLElement
-  let imageText = document.getElementById("image-text") as HTMLElement
-  image.addEventListener("load", () => {
-    imageText.classList.remove("hidden")
-    imageText.classList.add("flex")
-  })
-</script>

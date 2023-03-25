@@ -3,27 +3,19 @@ import MainHeader from "../components/MainHeader.astro"
 import MainLayout from "../layouts/MainLayout.astro"
 import RecentPosts from "../components/RecentPosts.astro"
 import TopImage from "../components/TopImage.astro"
+import ContentLayout from "../layouts/ContentLayout.astro"
 
 const heroImage = "../../assets/Leaf.png"
 ---
 
 <MainLayout title={"Blunt Truths"} banner={"Blunt Truths"}>
-  <TopImage />
-  <RecentPosts />
-  <div class="p-6">
-    <MainHeader text={"Vision"} />
-    <p class="text-xs italic">"To believe in everyone's ability to change"</p>
-    <p class="pt-4 pl-3 indent-4 text-xs">
-      If God pulled me out of addiction, he can do it for you too. After years
-      of hurting myself and those around me, I finally made the decision to
-      quit. Looking back, I can see God standing with me at every turn. God
-      draws himself near those who are struggling. He eats with the sinners and
-      uses the broken for His purpose. I believe in you and your ability to
-      change, and so I've commited myself to these writings in hopes of
-      inspiring others. I want you to get the most out of your life and gain
-      freedom from your vices. Thank you so much for your time, I appreciate
-      you.
-    </p>
-  </div>
-  <div class="p-6"></div>
+  <TopImage
+    image={"../public/leaves.jpg"}
+    title={"Fighting Marijuana Addiction"}
+    sub={"One story at a time"}
+    color={"#646464"}
+  />
+  <ContentLayout>
+    <RecentPosts />
+  </ContentLayout>
 </MainLayout>

@@ -1,0 +1,10 @@
+---
+interface Props {
+  text: string
+  className: string
+}
+
+const { text, className } = Astro.props as Props
+---
+
+<p class={`${className} text-sm sm:text-base`}>{text}</p>

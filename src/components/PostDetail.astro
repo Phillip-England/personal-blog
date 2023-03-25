@@ -1,0 +1,20 @@
+---
+import P from "./P.astro"
+
+interface Props {
+  href: string
+  title: string
+  sub: string
+  date: string
+}
+
+const { href, title, sub, date } = Astro.props as Props
+---
+
+<li>
+  <a href={href}>
+    <P text={title} className="mt-3 underline" />
+    <P text={sub} className="italic" />
+    <P text={date} className="italic" />
+  </a>
+</li>

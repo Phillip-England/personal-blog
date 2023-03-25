@@ -10,10 +10,16 @@ const { banner } = Astro.props as Props
 
 <!-- navbar  -->
 <div
-  class="fixed top-0 z-50 flex h-16 w-screen flex-row justify-between bg-white font-bold text-main shadow-md"
+  class="fixed top-0 z-50 flex h-16 w-screen flex-row justify-between bg-white"
 >
-  <h1 class="text-md self-center p-5">{banner}</h1>
-  <div class="self-center">
+  <!-- navbar title -->
+  <div class="flex-grow">
+    <h1 class="text-md self-center p-5 font-semibold text-main">
+      {banner}
+    </h1>
+  </div>
+  <!-- navbar icon -->
+  <div class="self-center sm:hidden">
     <div id="naviconBars">
       <i class="fa-bars fa-solid p-5"></i>
     </div>
@@ -21,24 +27,47 @@ const { banner } = Astro.props as Props
       <i class="fa-x fa-solid"></i>
     </div>
   </div>
+  <!-- navbar menu (medium and up) -->
+  <nav class="hidden w-fit sm:flex sm:pr-5">
+    <ul class="flex flex-row items-center gap-8">
+      <li>
+        <a
+          href="/"
+          class={currentPath === "" ? "text-main underline" : "text-black"}
+          >Home</a
+        >
+      </li>
+      <li>
+        <a
+          href="/about"
+          class={currentPath === "about" ? "text-main underline" : "text-black"}
+          >About</a
+        >
+      </li>
+    </ul>
+  </nav>
 </div>
 
-<!-- nav menu -->
+<!-- mobile nav menu -->
 <nav
   id="navmenu"
-  class="fixed top-16 z-50 hidden h-full w-2/3 flex-col bg-white"
+  class="fixed top-16 z-50 hidden h-full w-2/3 flex-col bg-white xs:w-2/5"
 >
   <ul>
-    <li class="p-4 font-serif">
-      <a href="/" class={currentPath === "" ? "text-blue-500" : "text-main"}
-        >Home</a
+    <li class="flex p-4">
+      <a
+        href="/"
+        class={currentPath === ""
+          ? "text-main underline flex-1"
+          : "text-black flex-1"}>Home</a
       >
     </li>
     <li class="p-4">
       <a
         href="/about"
-        class={currentPath === "about" ? "text-blue-500" : "text-main"}
-        >About Me</a
+        class={currentPath === "about"
+          ? "text-main underline flex-1"
+          : "text-black flex-1"}>About</a
       >
     </li>
   </ul>
@@ -47,10 +76,26 @@ const { banner } = Astro.props as Props
 <!-- spacer -->
 <div class="h-16"></div>
 
+<!-- overlay -->
+<div id="overlay" class="fixed z-40 hidden h-full w-full bg-black opacity-40">
+</div>
+
+<!-- footer -->
+<footer
+  class="fixed bottom-0 flex h-16 w-full items-center justify-end bg-white"
+>
+  <p class="pr-4 text-sm italic text-main">
+    I believe everyone has the capcity to change
+  </p>
+</footer>
+
+<!-- spacer -->
+
 <script>
   let naviconBars = document.getElementById("naviconBars") as HTMLElement
   let naviconX = document.getElementById("naviconX") as HTMLElement
   let navmenu = document.getElementById("navmenu") as HTMLElement
+  let overlay = document.getElementById("overlay") as HTMLElement
 
   naviconBars.addEventListener("click", () => {
     if (navmenu.classList.contains("hidden")) {
@@ -58,11 +103,13 @@ const { banner } = Astro.props as Props
       navmenu.classList.add("flex")
       naviconBars.classList.add("hidden")
       naviconX.classList.remove("hidden")
+      overlay.classList.remove("hidden")
     } else {
       navmenu.classList.add("hidden")
       navmenu.classList.remove("flex")
       naviconBars.classList.remove("hidden")
       naviconX.classList.add("hidden")
+      overlay.classList.add("hidden")
     }
   })
 
@@ -72,11 +119,21 @@ const { banner } = Astro.props as Props
       navmenu.classList.remove("flex")
       naviconBars.classList.remove("hidden")
       naviconX.classList.add("hidden")
+      overlay.classList.add("hidden")
     } else {
       navmenu.classList.remove("hidden")
       navmenu.classList.add("flex")
       naviconBars.classList.add("hidden")
       naviconX.classList.remove("hidden")
+      overlay.classList.remove("hidden")
     }
+  })
+
+  overlay.addEventListener("click", () => {
+    navmenu.classList.add("hidden")
+    navmenu.classList.remove("flex")
+    naviconBars.classList.remove("hidden")
+    naviconX.classList.add("hidden")
+    overlay.classList.add("hidden")
   })
 </script>
