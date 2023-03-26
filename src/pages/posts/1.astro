@@ -6,107 +6,24 @@ import H2 from "../../components/H2.astro"
 import P from "../../components/P.astro"
 import image from "../../images/1.jpg"
 
-const heroImage = "../../assets/Leaf.png"
-const section1 = `
-    Our loved ones are the first impacted by our addiction.
-    They may not be perfect, but their love for us makes it difficult for them to remain silent.
-    Their critisism is their way of trying to help us avoid the long-term consequences of our actions.
-    Our natural response is to defend our addiction.
-    We may use anger to intimidate others.
-    We may also incite guilt so others feel pity for us.
-    These are stradegies to train those around us to leave us and our addiction alone.
-    If your loved ones show concern about your repeated behaviour, and you feel the need to defend yourself, you might be struggling with an addiction.
+const overview = `
+Not everyone has a problem with Marijuana. I want to be clear. Some people can smoke casually without developing an addiction. But, it would be a mistake to assume yourself as one of those people. For those of us who cannot control our use, identifying the addiction in one's self can be tremendously difficult. Marijuana is deceptive. In my experience, marijuana was the most difficult addiction I delt with, and it's deceptive nature added tons of complexity. The following are 3 ways marijuana deceives addicts into continuing to use the drug, despite negative consequences.
 `
+
+const section1 = `
+A lot of drugs have obvious physical tells. A meth addict can be spotted from a mile away, but marijuana harms gradually, over a long period of time.  It is a perfect balance. Marijuana is harmful, but it is not harmful enough to cause immediate concern. We can easily justify away the damage (or ignore it altogether) because the evidence is not readily seen. Here is a good mental practice I use as a reminder. Let's imagine for the next week you blew all your smoke through a straw. What would that straw look like at the end of the week? What would it smell like? I can already smell it. I can feel myself scrubbing globs of resin from my fingers. If you ever doubt the damage done to your body by smoking marijuana, remember what your bowl looked like the last time you scaped it.
+`
+
 const section2 = `
-    Our finances are a direct reflection of what we value.
-    By default, it is easy to spend money without thinking.
-    We all want the quickest path to feeling good in the moment.
-    Your bank account does not lie.
-    Where is all your money going?
-    Have you sacraficed planning for your future in order to get high?
-    Have you mentally avoided this topic or justified your expenses with an excuse?
-    I used to tell myself, "I worked hard for my money, why shouldn't I get to enjoy some of it?"
-    Excuses like this are just tools we use to continue our use guilt-free.
-    If we truly faced our actions and their consequences, we would feel bad, which completely contradicts why we use in the first place.
+The best enemies disguise themselves as friends. We've create memories with marijuana. Some of our closest moments with others involved marijuana. It creates an air of nostalgia. Marijuana has a way of distorting our perception of the past. All we can remember is the warm, friendly moments. The good times. Our bad moments with marijuana are blurred behind the smoke and are stored deep within our mental vault. The way in which marijuana shapes our view of itself is deceptive. It paints itself out to be the solution to all of our problems. We become more dependent on it as our savior, and we find ourselves in a place where we cannot enjoy life without it.
 `
 
 const section3 = `
-    Our routines reveal our character.
-    Every day, we go through multiple transitions, and these transitions are key to discovering what we value.
-    We transition from being asleep to being awake. We transition from the shower into our bedroom. We transition from home to work.
-    What is the first thing you do when you transition into a safe place where your actions are not known to others?
-    What do you miss the most when you transition into an area where others are watching?
-    We all know the anwsers to these questions, and the way we behave when no one is watching is very telling.
+At first, marijuana is just an activity. It's something we do on the weekends with our friends. We do it to have fun and feel good. Nobody smokes for the first time with the intention of developing a lifelong habit. Like weeds in a garden, marijuana slowly encroaches on every aspect of our lives. Our weekends are filled with it. Our relationships are centered around it. It creeps in and takes root. At some point, marijuana stops being a recreational activity, and embeds itself into our core identity. It becomes a part of us and it can be extremely difficult to uproot. Take a look at your life. How many people have you seen smoke weed in your life? How many of those people still smoke weed? Most of them will continue to smoke weed for the rest of their life.
 `
 
-const section4 = `
-    Some people can struggle with an addiction and live a seemingly normal life.
-    They've learned how to cover their tracks (for the most part) and survive.
-    But, not everyone is a functional addict.
-    Most addicts latch on to a host in their life and depend on them to survive. I was a leech, and my Mother was a host.
-    It took her years to move on and stop enabling me. I would exploit her and guilt trip her.
-    I'd say things like, "Just this once," or "I promise I won't do it again."
-    So, who is the host in your life? Who are you depending on for your next meal?
-    Who is the first person you call when the consequences of your drug-use set in?
-    That's your host, and we are the leeches.
-`
-
-const section5 = `
-    You may not be a person of faith, but as humans, we are forced to deal with the issue of God.
-    There is something about drug addiction which brings about spritual experiences.
-    In The Gospel, there is a story where Jesus eats with the sinners.
-    God, as a man, placed himself amongst the most unworthy group of people.
-    And in the middle of our drug addiction, you will find him doing the same.
-    This aspect of addiction can go unspoken, but if you are activly using, you'll understand exactly what I mean.
-    God will show up in the middle of the madness. He will not force us to change, but He will nudge us.
-    He will create undeniable coincedences in our lives which will speak directly to us.
-    This is evidence of a problem, and God is in pursuit of us to save us and get us out of danger.
-`
-
-const section6 = `
-    Remember the first time you got high? I do, and all it took was a few hits.
-    The first time only happens once, and we will never feel like that again.
-    Our bodies are designed to filter our containmenets, and they get better with practice.
-    This leads to tolerance, where we need more drugs to feel the same effect.
-    If our body has become an expert at filtering out harmful chemicals, this is a clear sign of addiction.
-    It's evidence we have overloaded ourselves to the point to where our biology is literally warring against our behavour.
-    Pay attention to your body, it tells you what it likes, and what it doesn't like.
-`
-
-const section7 = `
-    Imagine going a whole day without getting high. And not because you are working a 12-hour shift.
-    Better yet, imagine staying sober.. on your birthday! Sounds like a drag, right?
-    Believe it or not, a lot of people can go an entire month without taking a sip, let alone shooting up.
-    No judgement, but sometimes our behaviour becomes normal and we assume everyone else is just like us.
-    You don't have to use, and if you've forgotten what it's like to enjoy life without getting high, the truth is obvious.
-`
-
-const section8 = `
-    Name the top 5 most important things in you're life. Now, do your actions reflect this?
-    None of us are perfect, but if you find a huge gap between what you say you value, and what your actions say you value, this is a problem.
-    As addicts, we do not want to feel bad about ourselves. So, we justify our behaviour and create a false mental image of ourselves.
-    No one wants to face the how they negativly impact the world around them.
-    But living in a lie is not the path to freedom.
-
-`
-
-const section9 = `
-    If we were 100% honest with everyone around us about our behaviour, they would be floored.
-    Addicts do outlandish things to stay high, and staying high 24/7 is an exaughsting task.
-    So, we lie.
-    You can't find an addict who doesn't have things they will take to the grave with them.
-    It's just the nature of addiction. It drives us to do the unthinkable.
-    We lie so much we actually start to believe it.
-    Lies are like stepping stones which allow us to move forward in our addiction guilt-free.
-    They become our safe-haven and caccoon us from the truth: we are broken people who cannot control their behaviour.
-`
-
-const section10 = `
-    Ultimately, addiction leads to death. Engaging in an active addiction does tremendous damage to our physical and mental health.
-    Our diet, our education, our fitness, all of these things take the back seat while we drive futher into oblivion.
-    We neglect ourselves and those around us to squeeze more dopamine out of our day.
-    We may attempt to secure things on the surface, but no amount of pull-ups is going to unravel the damage we are doing.
-    Our choices will catch up to us, it is only a matter of time.
+const summary = `
+Marijuana is a deceptive drug. It presents itself as harmless and does just enough damage to go unnoticed. It does not announce its intentions as the front door, rather it conceals its efforts and its negative consequences can be easily ignored. It becomes a nostalgic pastime and makes big, empty promises. Eventually, we become dependent on it to get any enjoyment out of life. Marijuana becomes a part of us, and we slowly integrate it into our core identity. These are some major aspects that make quitting the drug extremely challenging. I believe in everyone's capacity to change, and if I did it, so can you. Thank you so much for your time, I appreciate you deeply.
 `
 ---
 
@@ -114,32 +31,22 @@ const section10 = `
   <div class="justify-between">
     <TopImage
       image={image}
-      title={"Evidence of a Deeper Problem"}
-      sub={"10 signs of drug addiction"}
+      title={"The Deceptive Nature of Marijuana"}
+      sub={"3 ways marijuana decieves addicts"}
       color={"#333333"}
     />
     <ContentLayout>
       <div class="p-4">
-        <H2 text={"1. Our Loved Ones Have Noticed"} />
+        <H2 text={"Overview"} />
         <P className="pt-2 pl-4 indent-4 pb-4" text={section1} />
-        <H2 text={"2. We Have Trouble With Our Finances"} />
+        <H2 text={"1. Marijuana Harms Beneath the Surface"} />
+        <P className="pt-2 pl-4 indent-4 pb-4" text={section1} />
+        <H2 text={"2. Marijuana is Friendly"} />
         <P className="pt-2 pl-4 indent-4 pb-4" text={section2} />
-        <H2 text={"3. Our Day Revolves Around Using"} />
+        <H2 text={"3. Marijuana Takes Root in our Identity"} />
         <P className="pt-2 pl-4 indent-4 pb-4" text={section3} />
-        <H2 text={"4. We Leech Off Of Others"} />
-        <P className="pt-2 pl-4 indent-4 pb-4" text={section4} />
-        <H2 text={"5. God is Pursuing Us"} />
-        <P className="pt-2 pl-4 indent-4 pb-4" text={section5} />
-        <H2 text={"6. We Develop a Tolerance"} />
-        <P className="pt-2 pl-4 indent-4 pb-4" text={section6} />
-        <H2 text={"7. We Cannot Imagine Life Without Using"} />
-        <P className="pt-2 pl-4 indent-4 pb-4" text={section7} />
-        <H2 text={"8. We Stop Focusing On What Matters Most"} />
-        <P className="pt-2 pl-4 indent-4 pb-4" text={section8} />
-        <H2 text={"9. We Lie to Ourselves and Others"} />
-        <P className="pt-2 pl-4 indent-4 pb-4" text={section9} />
-        <H2 text={"10. We Compromise Our Health"} />
-        <P className="pt-2 pl-4 indent-4 pb-4" text={section10} />
+        <H2 text={"Summary"} />
+        <P className="pt-2 pl-4 indent-4 pb-4" text={summary} />
       </div>
     </ContentLayout>
   </div>
