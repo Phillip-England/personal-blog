@@ -14,9 +14,13 @@ const { banner } = Astro.props as Props
 >
   <!-- navbar title -->
   <div class="flex-grow">
-    <h1 class="text-md self-center p-5 font-semibold text-main">
-      {banner}
-    </h1>
+    <a href="/" class="">
+      <h1
+        class="text-md justify-center self-center p-5 font-semibold text-main"
+      >
+        {banner}
+      </h1>
+    </a>
   </div>
   <!-- navbar icon -->
   <div class="self-center sm:hidden">
@@ -27,16 +31,17 @@ const { banner } = Astro.props as Props
       <i class="fa-x fa-solid"></i>
     </div>
   </div>
+
   <!-- navbar menu (medium and up) -->
   <nav class="hidden w-fit sm:flex sm:pr-5">
     <ul class="flex flex-row items-center gap-8">
-      <li>
+      <!-- <li>
         <a
           href="/"
           class={currentPath === "" ? "text-main underline" : "text-black"}
           >Home</a
         >
-      </li>
+      </li> -->
       <!-- <li>
         <a
           href="/about"
