@@ -3,22 +3,30 @@ import H2 from "./H2.astro"
 import PostDetail from "./PostDetail.astro"
 import image1 from "../images/1.jpg"
 import image2 from "../images/2.jpg"
+import image3 from "../images/3.jpg"
 ---
 
 <div class="flex w-full flex-col p-4">
   <h2 class="text-lg font-semibold">Recent Posts</h2>
   <ul class="flex flex-col">
     <PostDetail
+      href="/posts/3"
+      title="Have you Won?"
+      sub="Facing our addiction when we are most vulnurable"
+      date="03/25/2023"
+      image={image3}
+    />
+    <PostDetail
       href="/posts/2"
       title="Is Marijuana Your Friend?"
-      sub="Testing your relationship with weed to see if you have a problem"
+      sub="Testing your relationship with weed"
       date="03/30/2023"
       image={image2}
     />
     <PostDetail
       href="/posts/1"
       title="The Deceptive Nature of Marijuana"
-      sub="Marijuana's ability to decieve addicts and keep them coming back for more"
+      sub="Exploring marijuana's ability to decieve"
       date="03/25/2023"
       image={image1}
     />

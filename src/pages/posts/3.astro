@@ -1,0 +1,47 @@
+---
+import MainLayout from "../../layouts/MainLayout.astro"
+import TopImage from "../../components/TopImage.astro"
+import ContentLayout from "../../layouts/ContentLayout.astro"
+import H2 from "../../components/H2.astro"
+import P from "../../components/P.astro"
+import image from "../../images/3.jpg"
+
+const overview = `
+Beating marijuana addiction can be tough. I've quit cigarettes, porn, and numerous other vices. For me, marijuana has been the most challenging addiction I've dealt with. I've relapsed multiple times and my aim here is to give you some tips on how the problem can sneak back into your life. Quitting for a week is different than quitting for a lifetime. The waves of life will crash into you, and we all need to be prepared for the moment when we want to cave and get high. Here are some signs you're entering a season where life will test you to see if you've truly moved on and quit smoking weed.
+`
+
+const section1 = `
+Every time I've experienced hardship in my relationships, I've fallen back into some vice in my life. Marijuana is no exception to this rule. During my divorce, I drank more liquor than I am proud to admit. Relapse is inevitable, and we all do it as a part of healing. Major fights or disagreements always sparked (pun intended) my urge to throw in the towel and roll a blunt. When we find ourselves struggling in our relationships, we need to take note and remember why we quit in the first place. Remember all the times you made personal commitments with yourself about smoking weed. Our self-respect is tied directly to our ability to control our future behavior. Don't let someone else drag you into a place where you give up on your values.
+`
+
+const section2 = `
+You would think struggling in your finances would push you to save money. In my experience, this is not the case. Being broke gives us an easy justification to buy weed. "I already don't have anything, so I might as well enjoy myself and get high." When we feel miles away from our financial goals, it hurts. It can feel like we are powerless to make any lasting change. And so we give in. We allow the pain in the present moment to compel us to use. It can help us to forget about our financial struggles and enjoy our time. But when the high wears off, we are in a worse position than when we started. If you're struggling and living paycheck to paycheck, be careful. All it takes is one time to lose all your hard work.
+`
+
+const section3 = `
+Marijuana helps to alleviate pain and can make tough moments more bearable. When I was smoking weed, I would use it to help when I was feeling sick. Now, every time I get a headache, I remember how awesome weed is at making me feel better. I have to be very careful to not fall into the trap of using marijuana to ward off a cold or the flu. I recently had my tonsils removed, and it was a nightmare. I was in tons of pain and the pain medication barely helped. During recovery, I thought about edibles all the time. If I could just take a few edibles, I'd feel better. But, I know myself well enough to know I cannot do "just edibles." I've tested it. For me, smoking weed or eating some edible, even just once, will result in me getting high everyday. It may not happen immediately, but one day turns into every day. Then the weekend turns into just in the evenings. Eventually, I'm getting high every free chance I get.
+`
+---
+
+<MainLayout title={"Blunt Truths"} banner={"Blunt Truths"}>
+  <div class="justify-between">
+    <TopImage
+      image={image}
+      title={"Have you Won?"}
+      sub={"Facing our addiction when we are most vulnurable"}
+      color={"#444444"}
+    />
+    <ContentLayout>
+      <div class="p-4">
+        <H2 text={"I Thought it Was Over"} />
+        <P className="pt-2 pl-4 indent-4 pb-4" text={overview} />
+        <H2 text={"Relationship Issues"} />
+        <P className="pt-2 pl-4 indent-4 pb-4" text={section1} />
+        <H2 text={"Financial Struggle"} />
+        <P className="pt-2 pl-4 indent-4 pb-4" text={section2} />
+        <H2 text={"Health Problems"} />
+        <P className="pt-2 pl-4 indent-4 pb-4" text={section3} />
+      </div>
+    </ContentLayout>
+  </div>
+</MainLayout>
