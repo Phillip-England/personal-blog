@@ -1,0 +1,47 @@
+---
+import MainLayout from "../../layouts/MainLayout.astro"
+import TopImage from "../../components/TopImage.astro"
+import ContentLayout from "../../layouts/ContentLayout.astro"
+import H2 from "../../components/H2.astro"
+import P from "../../components/P.astro"
+import image from "../../images/4.jpg"
+
+const overview = `
+I used to have the false impression that addiction is something with a definitive ending. I officially became an addict at 14 years old. It started with cigarettes and expanded from there. It's been 16 years since, and I still have to make the daily decision to stay committed to staying clean. Listen, some people may have a "magic moment" where they find freedom. I do not want to invalidate these types of experiences, but if you are anything like me, you do not have an off switch. Addiction is something I carry with me daily, so if that vibes with you, keep reading.
+`
+
+const section1 = `
+If we look closely, we can see our addiction was always there. I can spot my addiction in my childhood with video games and Yu-Gi-Oh. It's the hyper-focused madness that can never be fulfilled. It's the ability to grind relentlessly on things which add zero value to our lives, and all of it is centered around feeling good and finding meaning. Most addicts do not even see the problem, but once we identify the problem, we are forced to make a conscious decision. Do we accept the problem and live with it, or do we challenge the problem and resolve it? I'm nearing thirty, and I still have to make the choice to continue fighting, and I'm nowhere near perfect, and I fail often.
+`
+
+const section2 = `
+Addiction can have a way of tricking us into thinking the problem has been resolved. Marijuana has been a huge struggle for me and was the primary force that made me want to write about this issue. Here is a trap I've faced multiple times: I will have extended periods of time where I am not tempted. During these times, it is easy to think the issue has been resolved, but it hasn't. The most influential pervasive forces in our lives know when to take a step back. I personify my addiction because I've seen his character. I know his tactics, and I've faced them time and time again. If we escape the clutches of our addiction, it may back off for a season, but it will come back, and it will do so when we least expect it.
+`
+
+const section3 = `
+A few summers ago, I was super obsessed with fishing. Not a bad trade-off for getting high every day, huh? I started fishing directly after quitting weed for the 500th time. I believe in the devil, but you don't have to believe in the devil to derive value from this concept. In my experience, the world is wired in such a way that the opportunity to slip up and fail will arrive at the perfect moment. So, my daughter and I went fishing one evening. I went to set my tackle box down on a wooden post, and I noticed a joint. It had been hit a few times. My mouth started to water, and I was thrilled. I had been contemplating getting high, and the joint arrived at the perfect moment. I fished for a bit and then went home. I relapsed that night. Moral of the story: The moment you are most weak is the moment the opportunity will arrive. But you don't have to take my word for it, just watch. Watch how your life unfolds and take note of all the moments temptation presents itself. The world is riddled with landmines.
+`
+---
+
+<MainLayout title={"Blunt Truths"} banner={"Blunt Truths"}>
+  <div class="justify-between">
+    <TopImage
+      image={image}
+      title={"Landmines"}
+      sub={"Expecting temptation in our weakest moments"}
+      color={"#444444"}
+    />
+    <ContentLayout>
+      <div class="p-4">
+        <H2 text={"Are We Done Yet?"} />
+        <P className="pt-2 pl-4 indent-4 pb-4" text={overview} />
+        <H2 text={"It's Always Been There"} />
+        <P className="pt-2 pl-4 indent-4 pb-4" text={section1} />
+        <H2 text={"Seasonal Struggles"} />
+        <P className="pt-2 pl-4 indent-4 pb-4" text={section2} />
+        <H2 text={"Facing Landmines"} />
+        <P className="pt-2 pl-4 indent-4 pb-4" text={section3} />
+      </div>
+    </ContentLayout>
+  </div>
+</MainLayout>
